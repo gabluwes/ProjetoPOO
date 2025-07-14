@@ -4,6 +4,8 @@
  */
 package view;
 
+import java.sql.SQLException;
+
 /**
  *
  * @author Administrator
@@ -15,6 +17,12 @@ public class Vendas extends javax.swing.JFrame {
      */
     public Vendas() {
         initComponents();
+    }
+    
+    private void voltar() throws SQLException{
+        Login log = new Login();
+        log.setVisible(true);
+         dispose();
     }
 
     /**
@@ -72,19 +80,17 @@ public class Vendas extends javax.swing.JFrame {
         jCheckBoxMenuItem2.setText("jCheckBoxMenuItem2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1000, 1000));
 
         jPanel1.setBackground(new java.awt.Color(238, 242, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Sistema de Vendas");
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        buscarClienteBtn.setBackground(new java.awt.Color(255, 255, 255));
-        buscarClienteBtn.setForeground(new java.awt.Color(0, 0, 0));
         buscarClienteBtn.setText("Cliente Genérico");
 
         novoClienteBtn.setBackground(new java.awt.Color(0, 0, 0));
@@ -93,19 +99,14 @@ public class Vendas extends javax.swing.JFrame {
         novoClienteBtn.setText("Adicionar Produto");
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Nova Venda");
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Forma de Pagamento");
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Quantidade");
 
-        buscarClienteBtn1.setBackground(new java.awt.Color(255, 255, 255));
-        buscarClienteBtn1.setForeground(new java.awt.Color(0, 0, 0));
         buscarClienteBtn1.setText("Digite o código");
         buscarClienteBtn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,11 +115,8 @@ public class Vendas extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Código do Produto");
 
-        buscarClienteBtn2.setBackground(new java.awt.Color(255, 255, 255));
-        buscarClienteBtn2.setForeground(new java.awt.Color(0, 0, 0));
         buscarClienteBtn2.setText("1");
         buscarClienteBtn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,15 +125,11 @@ public class Vendas extends javax.swing.JFrame {
         });
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Cliente");
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Total:");
 
-        buscarClienteBtn3.setBackground(new java.awt.Color(255, 255, 255));
-        buscarClienteBtn3.setForeground(new java.awt.Color(0, 0, 0));
         buscarClienteBtn3.setText("1");
         buscarClienteBtn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -213,33 +207,35 @@ public class Vendas extends javax.swing.JFrame {
                 .addContainerGap(122, Short.MAX_VALUE))
         );
 
-        voltarVendas.setBackground(new java.awt.Color(255, 255, 255));
         voltarVendas.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        voltarVendas.setForeground(new java.awt.Color(0, 0, 0));
         voltarVendas.setText("Voltar");
+        voltarVendas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarVendasActionPerformed(evt);
+            }
+        });
 
-        sairVendas.setBackground(new java.awt.Color(255, 255, 255));
         sairVendas.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        sairVendas.setForeground(new java.awt.Color(0, 0, 0));
         sairVendas.setText("Sair");
+        sairVendas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sairVendasActionPerformed(evt);
+            }
+        });
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel10.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Produtos disponíveis");
 
         jLabel11.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Código");
 
         jLabel12.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Nome");
 
         jLabel13.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Preço");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -275,7 +271,6 @@ public class Vendas extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel8.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("Itens da Venda");
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -314,13 +309,13 @@ public class Vendas extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(82, 82, 82)
+                .addGap(91, 91, 91)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(voltarVendas, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 752, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 743, Short.MAX_VALUE)
                         .addComponent(sairVendas)
                         .addGap(43, 43, 43))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -375,6 +370,7 @@ public class Vendas extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void buscarClienteBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarClienteBtn1ActionPerformed
@@ -388,6 +384,20 @@ public class Vendas extends javax.swing.JFrame {
     private void buscarClienteBtn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarClienteBtn3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_buscarClienteBtn3ActionPerformed
+
+    private void voltarVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarVendasActionPerformed
+        try {
+            // TODO add your handling code here:
+            voltar();
+        } catch (SQLException ex) {
+            System.getLogger(Vendas.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        }
+    }//GEN-LAST:event_voltarVendasActionPerformed
+
+    private void sairVendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sairVendasActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_sairVendasActionPerformed
 
     /**
      * @param args the command line arguments

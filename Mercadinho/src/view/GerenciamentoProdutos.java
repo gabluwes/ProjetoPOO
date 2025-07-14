@@ -16,6 +16,12 @@ public class GerenciamentoProdutos extends javax.swing.JFrame {
     public GerenciamentoProdutos() {
         initComponents();
     }
+    
+    private void voltar() {
+        MenuAdministrador didin = new MenuAdministrador();
+        didin.setVisible(true);
+        dispose();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -66,17 +72,14 @@ public class GerenciamentoProdutos extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Gerenciamento de Produtos");
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel11.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Produtos Cadastrados");
 
-        buscarNomeGerencBtn.setBackground(new java.awt.Color(255, 255, 255));
         buscarNomeGerencBtn.setText("Buscar por nome ou código...");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons8-search-more-25.png"))); // NOI18N
@@ -84,43 +87,30 @@ public class GerenciamentoProdutos extends javax.swing.JFrame {
         codigoProdutoGerenciamento.setBackground(new java.awt.Color(255, 255, 255));
         codigoProdutoGerenciamento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        codigoProduto.setBackground(new java.awt.Color(255, 255, 255));
-        codigoProduto.setForeground(new java.awt.Color(0, 0, 0));
         codigoProduto.setText("001");
         codigoProduto.setBorder(null);
 
-        nomeProdutoGerenciamento.setBackground(new java.awt.Color(255, 255, 255));
-        nomeProdutoGerenciamento.setForeground(new java.awt.Color(0, 0, 0));
         nomeProdutoGerenciamento.setText("Produto A");
         nomeProdutoGerenciamento.setBorder(null);
 
-        precoProdutoGerenciamento.setBackground(new java.awt.Color(255, 255, 255));
-        precoProdutoGerenciamento.setForeground(new java.awt.Color(0, 0, 0));
         precoProdutoGerenciamento.setText("R$10,99");
         precoProdutoGerenciamento.setBorder(null);
 
         editarProdBtn.setBackground(new java.awt.Color(255, 255, 153));
         editarProdBtn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        editarProdBtn.setForeground(new java.awt.Color(0, 0, 0));
         editarProdBtn.setText("Editar");
 
         desativarProdBtn.setBackground(new java.awt.Color(255, 153, 153));
         desativarProdBtn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        desativarProdBtn.setForeground(new java.awt.Color(0, 0, 0));
         desativarProdBtn.setText("Desativar");
 
         removerProdBtn.setBackground(new java.awt.Color(255, 153, 153));
         removerProdBtn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        removerProdBtn.setForeground(new java.awt.Color(0, 0, 0));
         removerProdBtn.setText("Remover");
 
-        unidadeProdutoGerenciamento.setBackground(new java.awt.Color(255, 255, 255));
-        unidadeProdutoGerenciamento.setForeground(new java.awt.Color(0, 0, 0));
         unidadeProdutoGerenciamento.setText("UN");
         unidadeProdutoGerenciamento.setBorder(null);
 
-        estoqueProdutoGerenciamento.setBackground(new java.awt.Color(255, 255, 255));
-        estoqueProdutoGerenciamento.setForeground(new java.awt.Color(0, 0, 0));
         estoqueProdutoGerenciamento.setText("100");
         estoqueProdutoGerenciamento.setBorder(null);
 
@@ -182,38 +172,27 @@ public class GerenciamentoProdutos extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField4.setForeground(new java.awt.Color(0, 0, 0));
         jTextField4.setText("002");
         jTextField4.setBorder(null);
 
-        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField5.setForeground(new java.awt.Color(0, 0, 0));
         jTextField5.setText("Produto B");
         jTextField5.setBorder(null);
 
-        jTextField6.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField6.setForeground(new java.awt.Color(0, 0, 0));
         jTextField6.setText("R$ 20,00");
         jTextField6.setBorder(null);
 
         jButton3.setBackground(new java.awt.Color(255, 255, 153));
         jButton3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Editar");
 
         jButton6.setBackground(new java.awt.Color(255, 153, 153));
         jButton6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(0, 0, 0));
         jButton6.setText("Desativar");
 
         jButton7.setBackground(new java.awt.Color(255, 153, 153));
         jButton7.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(0, 0, 0));
         jButton7.setText("Remover");
 
-        jTextField9.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField9.setForeground(new java.awt.Color(0, 0, 0));
         jTextField9.setText("KG");
         jTextField9.setBorder(null);
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
@@ -222,8 +201,6 @@ public class GerenciamentoProdutos extends javax.swing.JFrame {
             }
         });
 
-        jTextField10.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField10.setForeground(new java.awt.Color(0, 0, 0));
         jTextField10.setText("100");
         jTextField10.setBorder(null);
 
@@ -271,9 +248,7 @@ public class GerenciamentoProdutos extends javax.swing.JFrame {
         novoProdGerencBtn.setForeground(new java.awt.Color(255, 255, 255));
         novoProdGerencBtn.setText("Novo produto");
 
-        listarProdBtn.setBackground(new java.awt.Color(255, 255, 255));
         listarProdBtn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        listarProdBtn.setForeground(new java.awt.Color(0, 0, 0));
         listarProdBtn.setText("Listar produtos");
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -323,8 +298,7 @@ public class GerenciamentoProdutos extends javax.swing.JFrame {
                         .addGap(49, 49, 49)
                         .addComponent(jLabel8)
                         .addGap(121, 121, 121)
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jLabel6)))
                 .addGap(45, 45, 45))
         );
         jPanel2Layout.setVerticalGroup(
@@ -358,10 +332,13 @@ public class GerenciamentoProdutos extends javax.swing.JFrame {
                 .addContainerGap(363, Short.MAX_VALUE))
         );
 
-        voltarGerenciamentoProdBtn.setBackground(new java.awt.Color(255, 255, 255));
         voltarGerenciamentoProdBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        voltarGerenciamentoProdBtn.setForeground(new java.awt.Color(0, 0, 0));
         voltarGerenciamentoProdBtn.setText("Voltar");
+        voltarGerenciamentoProdBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarGerenciamentoProdBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -412,6 +389,11 @@ public class GerenciamentoProdutos extends javax.swing.JFrame {
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void voltarGerenciamentoProdBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarGerenciamentoProdBtnActionPerformed
+        // TODO add your handling code here:
+        voltar();
+    }//GEN-LAST:event_voltarGerenciamentoProdBtnActionPerformed
 
     /**
      * @param args the command line arguments

@@ -16,6 +16,12 @@ public class GerenciamentoUnidades extends javax.swing.JFrame {
     public GerenciamentoUnidades() {
         initComponents();
     }
+    
+    private void voltar() {
+        MenuAdministrador didin = new MenuAdministrador();
+        didin.setVisible(true);
+        dispose();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -60,17 +66,14 @@ public class GerenciamentoUnidades extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Gerenciamento de Unidades");
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel11.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Unidades de Medida");
 
-        buscarUnidadeBtn.setBackground(new java.awt.Color(255, 255, 255));
         buscarUnidadeBtn.setText("Buscar por nome ou código...");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons8-search-more-25.png"))); // NOI18N
@@ -78,34 +81,25 @@ public class GerenciamentoUnidades extends javax.swing.JFrame {
         codigoProdutoGerenciamento.setBackground(new java.awt.Color(255, 255, 255));
         codigoProdutoGerenciamento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        codigoUnidade.setBackground(new java.awt.Color(255, 255, 255));
-        codigoUnidade.setForeground(new java.awt.Color(0, 0, 0));
         codigoUnidade.setText("UN");
         codigoUnidade.setBorder(null);
 
-        nomeUnidade.setBackground(new java.awt.Color(255, 255, 255));
-        nomeUnidade.setForeground(new java.awt.Color(0, 0, 0));
         nomeUnidade.setText("Unidade");
         nomeUnidade.setBorder(null);
 
-        descricaoUnidade.setBackground(new java.awt.Color(255, 255, 255));
-        descricaoUnidade.setForeground(new java.awt.Color(0, 0, 0));
         descricaoUnidade.setText("Peça individual");
         descricaoUnidade.setBorder(null);
 
         editarUnidadeBtn.setBackground(new java.awt.Color(255, 255, 153));
         editarUnidadeBtn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        editarUnidadeBtn.setForeground(new java.awt.Color(0, 0, 0));
         editarUnidadeBtn.setText("Editar");
 
         desativarUnidadeBtn.setBackground(new java.awt.Color(255, 153, 153));
         desativarUnidadeBtn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        desativarUnidadeBtn.setForeground(new java.awt.Color(0, 0, 0));
         desativarUnidadeBtn.setText("Desativar");
 
         removerUnidadeBtn.setBackground(new java.awt.Color(255, 153, 153));
         removerUnidadeBtn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        removerUnidadeBtn.setForeground(new java.awt.Color(0, 0, 0));
         removerUnidadeBtn.setText("Remover");
 
         javax.swing.GroupLayout codigoProdutoGerenciamentoLayout = new javax.swing.GroupLayout(codigoProdutoGerenciamento);
@@ -160,33 +154,24 @@ public class GerenciamentoUnidades extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField4.setForeground(new java.awt.Color(0, 0, 0));
         jTextField4.setText("KG");
         jTextField4.setBorder(null);
 
-        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField5.setForeground(new java.awt.Color(0, 0, 0));
         jTextField5.setText("Quilograma");
         jTextField5.setBorder(null);
 
         jButton3.setBackground(new java.awt.Color(255, 255, 153));
         jButton3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Editar");
 
         jButton6.setBackground(new java.awt.Color(255, 153, 153));
         jButton6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(0, 0, 0));
         jButton6.setText("Desativar");
 
         jButton7.setBackground(new java.awt.Color(255, 153, 153));
         jButton7.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(0, 0, 0));
         jButton7.setText("Remover");
 
-        jTextField9.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField9.setForeground(new java.awt.Color(0, 0, 0));
         jTextField9.setText("Unidade de peso");
         jTextField9.setBorder(null);
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
@@ -233,9 +218,7 @@ public class GerenciamentoUnidades extends javax.swing.JFrame {
         novoUnidadeBtn.setForeground(new java.awt.Color(255, 255, 255));
         novoUnidadeBtn.setText("Nova unidade");
 
-        listarUnidadesBtn.setBackground(new java.awt.Color(255, 255, 255));
         listarUnidadesBtn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        listarUnidadesBtn.setForeground(new java.awt.Color(0, 0, 0));
         listarUnidadesBtn.setText("Listar Unidades");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -306,10 +289,13 @@ public class GerenciamentoUnidades extends javax.swing.JFrame {
                 .addContainerGap(363, Short.MAX_VALUE))
         );
 
-        voltarUnidadesBtn.setBackground(new java.awt.Color(255, 255, 255));
         voltarUnidadesBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        voltarUnidadesBtn.setForeground(new java.awt.Color(0, 0, 0));
         voltarUnidadesBtn.setText("Voltar");
+        voltarUnidadesBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarUnidadesBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -360,6 +346,11 @@ public class GerenciamentoUnidades extends javax.swing.JFrame {
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void voltarUnidadesBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarUnidadesBtnActionPerformed
+        // TODO add your handling code here:
+        voltar();
+    }//GEN-LAST:event_voltarUnidadesBtnActionPerformed
 
     /**
      * @param args the command line arguments

@@ -4,6 +4,8 @@
  */
 package view;
 
+import java.sql.SQLException;
+
 /**
  *
  * @author Administrator
@@ -15,6 +17,12 @@ public class MenuAdministrador extends javax.swing.JFrame {
      */
     public MenuAdministrador() {
         initComponents();
+    }
+    
+    private void voltar() throws SQLException{
+        Login log = new Login();
+        log.setVisible(true);
+         dispose();
     }
 
     /**
@@ -54,16 +62,19 @@ public class MenuAdministrador extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Menu do Administrador");
 
         painelUsuarios.setBackground(new java.awt.Color(255, 255, 255));
         painelUsuarios.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        painelUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                painelUsuariosMouseClicked(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons8-users-48.png"))); // NOI18N
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Usuários");
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -102,11 +113,15 @@ public class MenuAdministrador extends javax.swing.JFrame {
 
         painelProdutos.setBackground(new java.awt.Color(255, 255, 255));
         painelProdutos.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        painelProdutos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                painelProdutosMouseClicked(evt);
+            }
+        });
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons8-open-box-50.png"))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Produtos");
 
         jLabel7.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -145,11 +160,15 @@ public class MenuAdministrador extends javax.swing.JFrame {
 
         painelClientes.setBackground(new java.awt.Color(255, 255, 255));
         painelClientes.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        painelClientes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                painelClientesMouseClicked(evt);
+            }
+        });
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons8-safety-collection-place-50.png"))); // NOI18N
 
         jLabel9.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Clientes");
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -186,18 +205,25 @@ public class MenuAdministrador extends javax.swing.JFrame {
                 .addContainerGap(36, Short.MAX_VALUE))
         );
 
-        voltarAdministradorBtn.setBackground(new java.awt.Color(255, 255, 255));
         voltarAdministradorBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        voltarAdministradorBtn.setForeground(new java.awt.Color(0, 0, 0));
         voltarAdministradorBtn.setText("Voltar");
+        voltarAdministradorBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarAdministradorBtnActionPerformed(evt);
+            }
+        });
 
         painelUnidades.setBackground(new java.awt.Color(255, 255, 255));
         painelUnidades.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        painelUnidades.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                painelUnidadesMouseClicked(evt);
+            }
+        });
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons8-measure-50.png"))); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Unidades");
 
         jLabel13.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
@@ -234,11 +260,9 @@ public class MenuAdministrador extends javax.swing.JFrame {
         );
 
         nomeAdministrador.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        nomeAdministrador.setForeground(new java.awt.Color(0, 0, 0));
         nomeAdministrador.setText("Administrador");
 
         sairBtn.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        sairBtn.setForeground(new java.awt.Color(0, 0, 0));
         sairBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons8-exit-25.png"))); // NOI18N
         sairBtn.setText("Sair");
 
@@ -305,6 +329,43 @@ public class MenuAdministrador extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void voltarAdministradorBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarAdministradorBtnActionPerformed
+        try {
+            // TODO add your handling code here:
+            voltar();
+        } catch (SQLException ex) {
+            System.getLogger(MenuAdministrador.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
+        }
+    }//GEN-LAST:event_voltarAdministradorBtnActionPerformed
+
+    private void painelClientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_painelClientesMouseClicked
+        // TODO add your handling code here:
+        GerenciamentoClientes cliente = new GerenciamentoClientes();
+        cliente.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_painelClientesMouseClicked
+
+    private void painelUsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_painelUsuariosMouseClicked
+        // TODO add your handling code here:
+        GerenciamentoUsuarios usuarios = new GerenciamentoUsuarios();
+        usuarios.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_painelUsuariosMouseClicked
+
+    private void painelProdutosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_painelProdutosMouseClicked
+        // TODO add your handling code here:
+        GerenciamentoProdutos produtos = new GerenciamentoProdutos();
+        produtos.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_painelProdutosMouseClicked
+
+    private void painelUnidadesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_painelUnidadesMouseClicked
+        // TODO add your handling code here:
+        GerenciamentoUnidades unidades = new GerenciamentoUnidades();
+        unidades.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_painelUnidadesMouseClicked
 
     /**
      * @param args the command line arguments

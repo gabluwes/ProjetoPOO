@@ -21,8 +21,9 @@ import util.ConnectionFactory;
 public class UsuarioDAO {
 
   
-    public Usuario login(String username, String senha) {
+    public String login(String username, String senha) {
         String sql = "SELECT * FROM usuarios WHERE username = ? AND senha = ? AND ativo = 1";
+        String tipo = null;
 
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -38,11 +39,14 @@ public class UsuarioDAO {
                     usuario.setNome(rs.getString("nome"));
                     usuario.setTipo(rs.getString("tipo"));
                     usuario.setAtivo(rs.getBoolean("ativo"));
-                    return usuario;
+                    tipo = usuario.getTipo();
+                    
                 }
             }
+            return tipo;
         } catch (SQLException e) {
             JOptionPane.showMessageDialog(null, "Erro ao tentar fazer login: " + e.getMessage());
+            
         }
      
         return null;

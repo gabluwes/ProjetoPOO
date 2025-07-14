@@ -16,6 +16,12 @@ public class GerenciamentoClientes extends javax.swing.JFrame {
     public GerenciamentoClientes() {
         initComponents();
     }
+    
+    private void voltar() {
+        MenuAdministrador didin = new MenuAdministrador();
+        didin.setVisible(true);
+        dispose();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -60,17 +66,14 @@ public class GerenciamentoClientes extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Gerenciamento de Clientes");
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel11.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Clientes Cadastrados");
 
-        buscarClienteBtn.setBackground(new java.awt.Color(255, 255, 255));
         buscarClienteBtn.setText("Buscar por nome...");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons8-search-more-25.png"))); // NOI18N
@@ -78,34 +81,25 @@ public class GerenciamentoClientes extends javax.swing.JFrame {
         codigoProdutoGerenciamento.setBackground(new java.awt.Color(255, 255, 255));
         codigoProdutoGerenciamento.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        nomeCliente.setBackground(new java.awt.Color(255, 255, 255));
-        nomeCliente.setForeground(new java.awt.Color(0, 0, 0));
         nomeCliente.setText("Jucimar");
         nomeCliente.setBorder(null);
 
-        telefoneCliente.setBackground(new java.awt.Color(255, 255, 255));
-        telefoneCliente.setForeground(new java.awt.Color(0, 0, 0));
         telefoneCliente.setText("(92) 99124-2222");
         telefoneCliente.setBorder(null);
 
-        enderecoClienteVar.setBackground(new java.awt.Color(255, 255, 255));
-        enderecoClienteVar.setForeground(new java.awt.Color(0, 0, 0));
         enderecoClienteVar.setText("Rua B, 155");
         enderecoClienteVar.setBorder(null);
 
         editarClienteBtn.setBackground(new java.awt.Color(255, 255, 153));
         editarClienteBtn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        editarClienteBtn.setForeground(new java.awt.Color(0, 0, 0));
         editarClienteBtn.setText("Editar");
 
         desativarClienteBtn.setBackground(new java.awt.Color(255, 153, 153));
         desativarClienteBtn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        desativarClienteBtn.setForeground(new java.awt.Color(0, 0, 0));
         desativarClienteBtn.setText("Desativar");
 
         removerClienteBtn.setBackground(new java.awt.Color(255, 153, 153));
         removerClienteBtn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        removerClienteBtn.setForeground(new java.awt.Color(0, 0, 0));
         removerClienteBtn.setText("Remover");
 
         javax.swing.GroupLayout codigoProdutoGerenciamentoLayout = new javax.swing.GroupLayout(codigoProdutoGerenciamento);
@@ -160,33 +154,24 @@ public class GerenciamentoClientes extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField4.setForeground(new java.awt.Color(0, 0, 0));
         jTextField4.setText("Carlos");
         jTextField4.setBorder(null);
 
-        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField5.setForeground(new java.awt.Color(0, 0, 0));
         jTextField5.setText("(92) 9922-2222");
         jTextField5.setBorder(null);
 
         jButton3.setBackground(new java.awt.Color(255, 255, 153));
         jButton3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Editar");
 
         jButton6.setBackground(new java.awt.Color(255, 153, 153));
         jButton6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(0, 0, 0));
         jButton6.setText("Desativar");
 
         jButton7.setBackground(new java.awt.Color(255, 153, 153));
         jButton7.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(0, 0, 0));
         jButton7.setText("Remover");
 
-        jTextField9.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField9.setForeground(new java.awt.Color(0, 0, 0));
         jTextField9.setText("Rua C, 152");
         jTextField9.setBorder(null);
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
@@ -233,9 +218,7 @@ public class GerenciamentoClientes extends javax.swing.JFrame {
         novoClienteBtn.setForeground(new java.awt.Color(255, 255, 255));
         novoClienteBtn.setText("Novo cliente");
 
-        listarClientesBtn.setBackground(new java.awt.Color(255, 255, 255));
         listarClientesBtn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        listarClientesBtn.setForeground(new java.awt.Color(0, 0, 0));
         listarClientesBtn.setText("Listar clientes");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -306,10 +289,13 @@ public class GerenciamentoClientes extends javax.swing.JFrame {
                 .addContainerGap(363, Short.MAX_VALUE))
         );
 
-        voltarGerenciamentoCliBtn.setBackground(new java.awt.Color(255, 255, 255));
         voltarGerenciamentoCliBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        voltarGerenciamentoCliBtn.setForeground(new java.awt.Color(0, 0, 0));
         voltarGerenciamentoCliBtn.setText("Voltar");
+        voltarGerenciamentoCliBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarGerenciamentoCliBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -360,6 +346,11 @@ public class GerenciamentoClientes extends javax.swing.JFrame {
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void voltarGerenciamentoCliBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarGerenciamentoCliBtnActionPerformed
+        // TODO add your handling code here:
+        voltar();
+    }//GEN-LAST:event_voltarGerenciamentoCliBtnActionPerformed
 
     /**
      * @param args the command line arguments

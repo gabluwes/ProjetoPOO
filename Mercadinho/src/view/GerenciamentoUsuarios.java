@@ -16,6 +16,12 @@ public class GerenciamentoUsuarios extends javax.swing.JFrame {
     public GerenciamentoUsuarios() {
         initComponents();
     }
+    
+    private void voltar() {
+        MenuAdministrador didin = new MenuAdministrador();
+        didin.setVisible(true);
+        dispose();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -60,17 +66,14 @@ public class GerenciamentoUsuarios extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Gerenciamento de usuários");
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel11.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Usuários do Sistema");
 
-        buscarNomeGerencBtn.setBackground(new java.awt.Color(255, 255, 255));
         buscarNomeGerencBtn.setText("Buscar por nome ou usuário...");
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/icons8-search-more-25.png"))); // NOI18N
@@ -78,34 +81,25 @@ public class GerenciamentoUsuarios extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        nomeUserGerenciamento.setBackground(new java.awt.Color(255, 255, 255));
-        nomeUserGerenciamento.setForeground(new java.awt.Color(0, 0, 0));
         nomeUserGerenciamento.setText("admin");
         nomeUserGerenciamento.setBorder(null);
 
-        perfilGerenciamento.setBackground(new java.awt.Color(255, 255, 255));
-        perfilGerenciamento.setForeground(new java.awt.Color(0, 0, 0));
         perfilGerenciamento.setText("Administrador");
         perfilGerenciamento.setBorder(null);
 
-        statusGerenciamento.setBackground(new java.awt.Color(255, 255, 255));
-        statusGerenciamento.setForeground(new java.awt.Color(0, 0, 0));
         statusGerenciamento.setText("Ativo");
         statusGerenciamento.setBorder(null);
 
         editarGerencBtn.setBackground(new java.awt.Color(255, 255, 153));
         editarGerencBtn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        editarGerencBtn.setForeground(new java.awt.Color(0, 0, 0));
         editarGerencBtn.setText("Editar");
 
         desativarGerencBtn.setBackground(new java.awt.Color(255, 153, 153));
         desativarGerencBtn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        desativarGerencBtn.setForeground(new java.awt.Color(0, 0, 0));
         desativarGerencBtn.setText("Desativar");
 
         removerGerencBtn.setBackground(new java.awt.Color(255, 153, 153));
         removerGerencBtn.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        removerGerencBtn.setForeground(new java.awt.Color(0, 0, 0));
         removerGerencBtn.setText("Remover");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -160,34 +154,25 @@ public class GerenciamentoUsuarios extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jTextField4.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField4.setForeground(new java.awt.Color(0, 0, 0));
         jTextField4.setText("caixa");
         jTextField4.setBorder(null);
 
-        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField5.setForeground(new java.awt.Color(0, 0, 0));
         jTextField5.setText("Atendente");
         jTextField5.setBorder(null);
 
-        jTextField6.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField6.setForeground(new java.awt.Color(0, 0, 0));
         jTextField6.setText("Ativo");
         jTextField6.setBorder(null);
 
         jButton3.setBackground(new java.awt.Color(255, 255, 153));
         jButton3.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Editar");
 
         jButton6.setBackground(new java.awt.Color(255, 153, 153));
         jButton6.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(0, 0, 0));
         jButton6.setText("Desativar");
 
         jButton7.setBackground(new java.awt.Color(255, 153, 153));
         jButton7.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(0, 0, 0));
         jButton7.setText("Remover");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -228,9 +213,7 @@ public class GerenciamentoUsuarios extends javax.swing.JFrame {
         novoUserGerencBtn.setForeground(new java.awt.Color(255, 255, 255));
         novoUserGerencBtn.setText("Novo usuário");
 
-        listarGerencBtn.setBackground(new java.awt.Color(255, 255, 255));
         listarGerencBtn.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        listarGerencBtn.setForeground(new java.awt.Color(0, 0, 0));
         listarGerencBtn.setText("Listar todos");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -297,10 +280,13 @@ public class GerenciamentoUsuarios extends javax.swing.JFrame {
                 .addContainerGap(363, Short.MAX_VALUE))
         );
 
-        voltarGerenciamentoUserBtn.setBackground(new java.awt.Color(255, 255, 255));
         voltarGerenciamentoUserBtn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        voltarGerenciamentoUserBtn.setForeground(new java.awt.Color(0, 0, 0));
         voltarGerenciamentoUserBtn.setText("Voltar");
+        voltarGerenciamentoUserBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                voltarGerenciamentoUserBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -347,6 +333,11 @@ public class GerenciamentoUsuarios extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void voltarGerenciamentoUserBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_voltarGerenciamentoUserBtnActionPerformed
+        // TODO add your handling code here:
+        voltar();
+    }//GEN-LAST:event_voltarGerenciamentoUserBtnActionPerformed
 
     /**
      * @param args the command line arguments
